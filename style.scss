@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: #282828;
+  --elementPaddingInside: 0.7em;
+  --elementPaddingOutside: 1.5em;
+  --borderColor: #333;
+  --topBottomMargin: 25px 0;
+  --topBottomPadding: 25px 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  .return {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+  .imageWrapper {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    padding: 7em;
+    canvas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+  }
+  .controlsWrapper {
+    width: 35%;
+    padding: 3em;
+    select,
+    input {
+      padding: var(--elementPaddingInside);
+      width: 100%;
+      //   border: 1px solid var(--borderColor);
+    }
+    .filesUploader {
+      padding: var(--elementPaddingOutside) 0px;
+    }
+  }
+}
+
+// Tabs
+
+$tabs-base-color: #ecf0f1;
+.tab {
+  display: block;
+  position: relative;
+  .tabs {
+    float: none;
+    list-style: none;
+    text-align: left;
+    margin: var(--topBottomPadding);
+    height: 50vh;
+    li {
+      float: left;
+      display: block;
+    }
+    input[type="radio"] {
+      position: absolute;
+      top: 0;
+      left: -9999px;
+    }
+    label {
+      display: block;
+      padding: 5px 10px;
+      font-weight: normal;
+      cursor: pointer;
+      position: relative;
+      top: 3px;
+      transition: all 0.2s ease-in-out;
+      background-color: #f0f8ff;
+      &:hover {
+        background: darken($tabs-base-color, 10);
+      }
+    }
+    .tab-content {
+      z-index: 2;
+      display: none;
+      overflow: hidden;
+      width: 100%;
+      line-height: 25px;
+      padding: 15px 0;
+      position: absolute;
+      left: 0;
+    }
+    [id^="tab"]:checked + label {
+      background: #8ee4ff;
+    }
+    [id^="tab"]:checked ~ [id^="tab-content"] {
+      display: block;
+    }
+  }
+  button#btn-save {
+    padding: 7px 25px;
+    background-color: #000000;
+    margin: 30px 0;
+    color: #fff;
+    border: 2px solid #000;
+  }
+  button#btn-save:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+// .Tabs

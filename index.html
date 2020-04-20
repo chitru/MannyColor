@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 Development Env</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dist/bundle.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="imageWrapper">
+        <div class="return">
+          <svg
+            class="Layer"
+            fill="#ffffff"
+            enable-background="new 0 0 64 64"
+            height="40"
+            viewBox="0 0 64 64"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z"
+            />
+          </svg>
+        </div>
+        <canvas id="canvasImg"> </canvas>
+      </div>
+      <div class="controlsWrapper">
+        <input type="file" placeholder="Choose a product" id="filesUploader" />
+        <select>
+          <option>Choose leather type</option>
+          <option value="">Bonded Leather/PVC</option>
+          <option value="">Chinese Leather</option>
+          <option value="">Top Grain Leather</option>
+        </select>
+        <!-- Tabs -->
+        <div class="tab">
+          <ul class="tabs" role="tablist">
+            <li>
+              <input type="radio" name="tabs" id="tab1" checked />
+              <label
+                for="tab1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel1"
+                tabindex="0"
+                >Main</label
+              >
+              <div
+                id="tab-content1"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="description"
+                aria-hidden="false"
+              >
+                <p>
+                  ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabs" id="tab2" />
+              <label
+                for="tab2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel2"
+                tabindex="0"
+                >Accent</label
+              >
+              <div
+                id="tab-content2"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="specification"
+                aria-hidden="true"
+              >
+                <p>"Seum fugiat quo voluptas nulla?</p>
+              </div>
+            </li>
+          </ul>
+          <button id="btn-save">Save</button>
+        </div>
+        <!-- ./Tabs -->
+      </div>
+    </div>
+  </body>
+  <script src="dist/bundle.js" type="text/javascript"></script>
+</html>
