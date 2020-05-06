@@ -31,17 +31,72 @@
           </svg>
         </div>
         <canvas id="canvasImg"> </canvas>
+        <img src="product.jpg" class="responsive-img" />
       </div>
       <div class="controlsWrapper">
         <input type="file" placeholder="Choose a product" id="filesUploader" />
-        <select>
-          <option>Choose leather type</option>
-          <option value="">Bonded Leather/PVC</option>
-          <option value="">Chinese Leather</option>
-          <option value="">Top Grain Leather</option>
+        <select id="sel">
+          <option value="choose">Choose leather type</option>
+          <option value="bonLe" id="bon">Bonded Leather/PVC</option>
+          <option value="genLe" id="gen">Genuine Leather/PVC</option>
+          <option value="itaLe" id="ita">Italian Leather</option>
+          <option value="puLe" id="pu">PU Leather</option>
         </select>
-        <!-- Tabs -->
-        <div class="tab">
+        <!-- Tabs for bonLe -->
+        <div class="tab" id="createTab">
+          <!-- <ul class="tabs" role="tablist">
+            <li>
+              <input type="radio" name="tabs" id="tab1" checked />
+              <label
+                for="tab1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel1"
+                tabindex="0"
+                >Main</label
+              >
+              <div
+                id="tab-content1"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="description"
+                aria-hidden="false"
+              >
+                <p>
+                  bonle ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabs" id="tab2" />
+              <label
+                for="tab2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel2"
+                tabindex="0"
+                >Accent</label
+              >
+              <div
+                id="tab-content2"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="specification"
+                aria-hidden="true"
+              >
+                <p>"Seum fugiat quo voluptas nulla?</p>
+              </div>
+            </li> 
+          </ul>
+          <div class="orientation">Orientation</div>-->
+          <button id="btn-save">Add to Cart</button>
+        </div>
+        <!-- ./Tabs for bonLe -->
+        <!-- Tabs for genLe -->
+        <!-- <div class="tab" id="genLe">
           <ul class="tabs" role="tablist">
             <li>
               <input type="radio" name="tabs" id="tab1" checked />
@@ -61,7 +116,113 @@
                 aria-hidden="false"
               >
                 <p>
-                  ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  genle psum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabs" id="tab2" />
+              <label
+                for="tab2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel2"
+                tabindex="0"
+                >Accent</label
+              >
+              <div
+                id="tab-content2"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="specification"
+                aria-hidden="true"
+              >
+                <p>"Seum fugiat quo voluptas nulla?</p>
+              </div>
+            </li>
+          </ul>
+          <div class="orientation">Orientation</div>
+          <button id="btn-save">Save</button>
+        </div> -->
+        <!-- ./Tabs for genLe -->
+        <!-- Tabs for itaLe -->
+        <!-- <div class="tab" id="itaLe">
+          <ul class="tabs" role="tablist">
+            <li>
+              <input type="radio" name="tabs" id="tab1" checked />
+              <label
+                for="tab1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel1"
+                tabindex="0"
+                >Main</label
+              >
+              <div
+                id="tab-content1"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="description"
+                aria-hidden="false"
+              >
+                <p>
+                  iitale psum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabs" id="tab2" />
+              <label
+                for="tab2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel2"
+                tabindex="0"
+                >Accent</label
+              >
+              <div
+                id="tab-content2"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="specification"
+                aria-hidden="true"
+              >
+                <p>"Seum fugiat quo voluptas nulla?</p>
+              </div>
+            </li>
+          </ul>
+          <div class="orientation">Orientation</div>
+          <button id="btn-save">Save</button>
+        </div> -->
+        <!-- ./Tabs for itaLe -->
+        <!-- Tabs for puLe -->
+        <!-- <div class="tab" id="puLe">
+          <ul class="tabs" role="tablist">
+            <li>
+              <input type="radio" name="tabs" id="tab1" checked />
+              <label
+                for="tab1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel1"
+                tabindex="0"
+                >Main</label
+              >
+              <div
+                id="tab-content1"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="description"
+                aria-hidden="false"
+              >
+                <p>
+                  pule psum dolor sit amet, consectetur adipisicing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                   enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
@@ -89,9 +250,10 @@
               </div>
             </li>
           </ul>
+          <div class="orientation">Orientation</div>
           <button id="btn-save">Save</button>
-        </div>
-        <!-- ./Tabs -->
+        </div> -->
+        <!-- ./Tabs for puLe -->
       </div>
     </div>
   </body>
